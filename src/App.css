@@ -1,0 +1,17 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+.Navbar{
+    width: 100%;
+    background-color: #18A558;
+}
+
+.Navbar-h1{
+    color:whitesmoke;
+    line-height: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 20px;
+    text-align: center;
+    box-shadow: 3px 4px 15px 3px #ccc;
+}
