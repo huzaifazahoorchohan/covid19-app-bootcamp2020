@@ -1,6 +1,7 @@
 *{
     margin:0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 .Navbar{
     width: 100%;
@@ -14,4 +15,13 @@
     padding-left: 20px;
     text-align: center;
     box-shadow: 3px 4px 15px 3px #ccc;
+}
+
+.box-title{
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box-value{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
