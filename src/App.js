@@ -5,12 +5,12 @@ import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 // Components
-import Header from './Components/Header';
+
 
 const App = () => {
   return(
     <div>
-        <Header />
+        <h1>Covid-19-app</h1>
     </div>
   )
 };
