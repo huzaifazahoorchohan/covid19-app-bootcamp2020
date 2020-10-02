@@ -8,7 +8,7 @@ import Select from '@material-ui/core/Select';
 const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
-    minWidth: 1000,
+    minWidth: 500,
     position:'absolute',
     left:'50%',
     transform:'translate(-50%)',
