@@ -4,8 +4,7 @@ const Header = () => {
     return(
         <div className = 'container-fluid header'>
             <div>
-                <h4>COVID-19</h4>
-                <h2>TRACKER</h2>
+                <h4>COVID-19 TRACKER</h4>
             </div>
         </div>
     )
