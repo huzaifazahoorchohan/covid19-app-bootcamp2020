@@ -47,4 +47,4 @@ jobs:
           
     # Now we need after installing surge we need to run that
     - name: Running a surge
-      run: surge ./build http://covid19-huzaifa.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./build http://covid19-huzaifa.surge.sh/.surge.sh --token ${{secrets.SURGE_TOKEN}}
