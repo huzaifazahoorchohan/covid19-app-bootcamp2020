@@ -9,6 +9,7 @@ import Header from './Components/Header';
 import CountryPicker from './Components/CountryPicker';
 import Table from './Components/Table';
 
+//COVID
 
 const App = () => {
   return(
