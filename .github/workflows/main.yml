@@ -1,14 +1,13 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Deploying Repo on surge
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -22,29 +21,26 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+ 
     # Runs a single command using the runners shell
-    - name: Install NodeJS
+    - name: Setup Node.js Environment
       uses: actions/setup-node@v2-beta
-      with: 
-        node-version: 12
-      
-    - name: Install Surge
-      run: npm install -g surge
+      with:
+        node-version: 12  
 
-    #npm installing yarn for create react app
-    - name: Installing yarn 
-      uses: borales/actions-yarn@v2.0.0
-      with:
-         cmd: install # will run `yarn install` command
+    # Runs a set of commands using the runners
+    - name: GitHub Action for Yarn
+      uses: borales/actions-yarn@v2.3.0
+       
+# will run build
     
-    # Now building yarn
-    - name: building yarn
-      uses: borales/actions-yarn@v2.0.0
-      env:
-          CI: false # CRA treats warnings as errors in CI - re-enable if needed
-      with:
-          cmd: build # will run `yarn build` command
-          
-    # Now we need after installing surge we need to run that
-    - name: Running a surge
-      run: surge ./build http://covid19-huzaifa.surge.sh/.surge.sh --token ${{secrets.SURGE_TOKEN}}
+    - name: Yarn Build
+      run: yarn build
+    
+    - name: installing Surge
+      run: npm install -g surge
+      
+      
+    - name: deploying build to surge
+      run: surge ./build http://covid19-huzaifa.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+
