@@ -57,7 +57,7 @@ const Chart = () =>{
         <Bar
           data={data}
           width={100}
-          height={200}
+          height={100}
           options={{
             maintainAspectRatio: false
           }}
